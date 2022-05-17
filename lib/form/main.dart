@@ -2,30 +2,14 @@
 import 'package:flutter/material.dart';
 import 'formscreen.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "My App",
-      home: MyHomePage(),
-      theme: ThemeData(primarySwatch: Colors.lightBlue),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class FormPage extends StatefulWidget {
+  const FormPage({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<FormPage> createState() => _FormPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _FormPageState extends State<FormPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

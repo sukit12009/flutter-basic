@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'student.dart';
@@ -17,17 +19,16 @@ class _FormScreenState extends State<FormScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("แบบฟอร์มบันทึกคะแนนสอบ")),
+      appBar: AppBar(title: const Text("แบบฟอร์มบันทึกคะแนนสอบ")),
       body: Padding(
         padding: const EdgeInsets.all(20),
-        child: Container(
-            child: Form(
+        child: Form(
           key: formKey,
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "ชื่อ",
                   style: TextStyle(fontSize: 20),
                 ),
@@ -37,10 +38,10 @@ class _FormScreenState extends State<FormScreen> {
                     myStudent.fname = fname;
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text(
+                const Text(
                   "นามสกุล",
                   style: TextStyle(fontSize: 20),
                 ),
@@ -50,10 +51,10 @@ class _FormScreenState extends State<FormScreen> {
                     myStudent.lname = lname;
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text(
+                const Text(
                   "อีเมล",
                   style: TextStyle(fontSize: 20),
                 ),
@@ -67,20 +68,20 @@ class _FormScreenState extends State<FormScreen> {
                   },
                   keyboardType: TextInputType.emailAddress,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text(
+                const Text(
                   "รหัสผ่าน",
                   style: TextStyle(fontSize: 20),
                 ),
                 TextFormField(
                   obscureText: true,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text(
+                const Text(
                   "คะแนน",
                   style: TextStyle(fontSize: 20),
                 ),
@@ -94,7 +95,7 @@ class _FormScreenState extends State<FormScreen> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    child: Text(
+                    child: const Text(
                       "บันทึกข้อมูล",
                       style: TextStyle(fontSize: 20),
                     ),
@@ -113,7 +114,7 @@ class _FormScreenState extends State<FormScreen> {
               ],
             ),
           ),
-        )),
+        ),
       ),
     );
   }

@@ -2,13 +2,13 @@ import 'package:basicflutter/login/login.dart';
 import 'package:basicflutter/login/register.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomeLoginPage extends StatelessWidget {
+  const HomeLoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Register/Login")),
+      appBar: AppBar(title: const Text("Register/Login")),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(10, 50, 10, 0),
         child: Column(
@@ -20,11 +20,11 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return RegisterScreen();
+                      return const RegisterScreen();
                     }));
                   },
-                  icon: Icon(Icons.add),
-                  label: Text(
+                  icon: const Icon(Icons.add),
+                  label: const Text(
                     "สร้างบัญชีผู้ใช้",
                     style: TextStyle(fontSize: 20),
                   )),
@@ -35,11 +35,11 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return LoginScreen();
+                      return const LoginScreen();
                     }));
                   },
-                  icon: Icon(Icons.login),
-                  label: Text(
+                  icon: const Icon(Icons.login),
+                  label: const Text(
                     "เข้าสู่ระบบ",
                     style: TextStyle(fontSize: 20),
                   )),

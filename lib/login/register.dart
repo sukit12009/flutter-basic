@@ -11,8 +11,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("สร้างบัญชีผู้ใช้")),
-      body: Column(children: []),
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(
+          "สร้างบัญชีผู้ใช้",
+        ),
+        leading: const Icon(Icons.android),
+        titleSpacing: 0,
+      ),
+      body: Column(children: [Container()]),
     );
   }
 }
